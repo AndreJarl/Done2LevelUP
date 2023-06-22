@@ -268,7 +268,7 @@ background-image: linear-gradient(315deg, #eb4511 0%, #b02e0c 74%);
     z-index: 1;
 }
 .notask{
-    color: black;
+    color: white;
     font-size: large;
     font-weight: 500;
     justify-content: center;
