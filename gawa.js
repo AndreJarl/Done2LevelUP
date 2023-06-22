@@ -53,7 +53,6 @@ function renderTodoLS(){
    let localItem = localStorage.getItem('todos');
    if(localItem === null){
      todo = [];
-     todohtml = '';
    }else{
     todo = JSON.parse(localItem);
    
@@ -83,6 +82,11 @@ function renderTodoLS(){
     todohtml += html;
       
    });
+   if(todo.length === 0){
+    todo = [];
+    todohtml = '<img class ="taskimg" src="images/notask.png" alt="" srcset=""> <p class ="notask" >NO TASK YET.</p>';
+    todosContainer.innerHTML += todohtml;
+  }
    todosContainer.innerHTML = todohtml;
 
    toCenter();
@@ -186,19 +190,22 @@ function initialMode(){
          dark();
       }
 }
-
+const text = document.querySelector('.text');
 function dark(){
   const title = document.querySelector('.title');
   body.style.backgroundColor = 'black';
   darkBtn.innerHTML = "Light Mode";
   localStorage.setItem('darkMode', 'dark');
- 
+  notask.style.color = 'white'; 
+  text.style.color = 'white';  
 }
-
+const notask = document.querySelector('.notask')
 function light(){
   body.style.backgroundColor = 'white';
   darkBtn.innerHTML = "Dark Mode";
   localStorage.setItem('darkMode', 'light');
+  text.style.color = 'black';  
+  notask.style.color = 'black'; 
 }
 
 const savedMode = localStorage.getItem('darkMode');
