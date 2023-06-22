@@ -188,10 +188,11 @@ function initialMode(){
 }
 
 function dark(){
+  const title = document.querySelector('.title');
   body.style.backgroundColor = 'black';
   darkBtn.innerHTML = "Light Mode";
   localStorage.setItem('darkMode', 'dark');
-
+ 
 }
 
 function light(){
@@ -206,4 +207,3 @@ if (savedMode === 'dark') {
 } else {
   light();
 }
-
