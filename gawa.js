@@ -6,6 +6,7 @@ let todosContainer = document.querySelector('.todosContainer');
 renderTodoLS();
 toCenter();
 
+
 function addTodoLS(){
     let taskInput = document.querySelector('.todoInput');
     let datetimeInput = document.querySelector('#date');
@@ -166,3 +167,43 @@ function cLose(){
   arrowOpen.style.pointerEvents = "auto";
   arrowClose.style.opacity="0";
 }
+
+
+
+const darkBtn = document.querySelector('.dark');
+const body = document.querySelector('.body');
+
+darkBtn.addEventListener('click', () => {
+  initialMode();
+  
+});
+
+function initialMode(){
+      const currentMode = localStorage.getItem('darkMode');
+      if(currentMode === 'dark'){
+          light();
+      }else{
+         dark();
+      }
+}
+
+function dark(){
+  body.style.backgroundColor = 'black';
+  darkBtn.innerHTML = "Light Mode";
+  localStorage.setItem('darkMode', 'dark');
+
+}
+
+function light(){
+  body.style.backgroundColor = 'white';
+  darkBtn.innerHTML = "Dark Mode";
+  localStorage.setItem('darkMode', 'light');
+}
+
+const savedMode = localStorage.getItem('darkMode');
+if (savedMode === 'dark') {
+  dark();
+} else {
+  light();
+}
+
