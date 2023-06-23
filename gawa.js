@@ -205,19 +205,23 @@ function initialMode(){
 var text = document.querySelector('.text');
 
 function dark(){
-  
+ 
   body.style.backgroundColor = 'black';
   darkBtn.innerHTML = "Light Mode";
   localStorage.setItem('darkMode', 'dark');
   notask.style.color = 'white'; 
   text.style.color = 'white';  
+  
 }
 var notask = document.querySelector('.notask')
+
+
 function light(){
+  
   body.style.backgroundColor = 'white';
   darkBtn.innerHTML = "Dark Mode";
   localStorage.setItem('darkMode', 'light');
-  // notask.style.color = 'black'; 
+  notask.style.color = 'black'; 
   text.style.color = 'black';  
   
 }
@@ -295,3 +299,4 @@ archBtn.addEventListener('click', () =>{
 function reload(){
    location.reload();
 }
+

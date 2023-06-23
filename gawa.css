@@ -313,7 +313,7 @@ background-image: linear-gradient(315deg, #eb4511 0%, #b02e0c 74%);
 }
 
 .count{
-    color: black;
+    color: red;
     font-size: large;
     font-weight: 500;
     justify-content: center;
