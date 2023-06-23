@@ -266,9 +266,11 @@ background-image: linear-gradient(315deg, #eb4511 0%, #b02e0c 74%);
     width: 400px;
     margin-top: -2em;
     z-index: 1;
+    display: flex;
+    justify-content: center;
 }
 .notask{
-    color: white;
+    color: black;
     font-size: large;
     font-weight: 500;
     justify-content: center;
@@ -289,11 +291,44 @@ background-image: linear-gradient(315deg, #eb4511 0%, #b02e0c 74%);
   left: 53em;
   top: -2em;
 } */
+
+
+.archDiv{
+    display: flex;
+    justify-content: center;
+}
+.indicate{
+    /* background-color:whitesmoke */
+    border-radius: 7px;
+    width: 70px;
+    font-size: 11px;
+    margin-top: 0;
+    padding: 5px;
+    align-items: center;
+    margin-top: -.7em;
+    margin-bottom: -.5em;
+    margin-left: -.5em;
+    font-weight: 700;
+    color: rgb(20, 19, 19);
+}
+
+.count{
+    color: black;
+    font-size: large;
+    font-weight: 500;
+    justify-content: center;
+    display: flex;
+    font-family: Poppins;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
 @media only screen and (max-width: 800px) and (min-width: 375px){
      .todosContainer{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        gap: 3px;
      }
      .text{
         font-size: 15px;
@@ -325,6 +360,7 @@ background-image: linear-gradient(315deg, #eb4511 0%, #b02e0c 74%);
         display: flex;
         flex-direction: column;
         justify-content: center;
+        gap: 3px;
      }
      .text{
         font-size: 12px;
