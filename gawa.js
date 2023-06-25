@@ -67,7 +67,7 @@ function renderTodoLS(){
 
       const html = `
       <div class ="todoSub">
-      
+      <p class = "indicate">active</p>
       <div class="task">${task}</div>
       <div class = "js">
       <div class="datetime">Due date: ${datetime}</div>
@@ -107,7 +107,7 @@ function deleteTodoLS(index){
  localStorage.setItem('todos', JSON.stringify(todo));
  toCenter()
  renderTodoLS();
-
+ reload();
 }
 
 //// for the levelbar
@@ -204,33 +204,37 @@ function initialMode(){
 }
 var text = document.querySelector('.text');
 
+var text1 = document.querySelector('.text1');
+var notask = document.querySelector('.notask')
 function dark(){
- 
+
   body.style.backgroundColor = 'black';
   darkBtn.innerHTML = "Light Mode";
   localStorage.setItem('darkMode', 'dark');
-  notask.style.color = 'white'; 
+ 
   text.style.color = 'white';  
-  
-}
-var notask = document.querySelector('.notask')
+  text1.style.color = 'white';  
 
+}
 
 function light(){
   
   body.style.backgroundColor = 'white';
   darkBtn.innerHTML = "Dark Mode";
   localStorage.setItem('darkMode', 'light');
-  notask.style.color = 'black'; 
+ 
   text.style.color = 'black';  
-  
+  text1.style.color = 'black';  
+
 }
 
 const savedMode = localStorage.getItem('darkMode');
 if (savedMode === 'dark') {
   dark();
+  
 } else {
   light();
+
 }
 
 function hide(){
@@ -299,4 +303,49 @@ archBtn.addEventListener('click', () =>{
 function reload(){
    location.reload();
 }
+
+// archBtn.addEventListener('click', () =>{
+//   indi();
+//   toCenter2();
+//   let archivedItems = localStorage.getItem('archivedtodos');
+//      let showArch = '';
+//       if(archivedItems == null){
+//         showArch = '';
+//         archived = [];
+
+//       }else{
+//         // archived = JSON.parse(archivedItems);
+//         console.log(archived);
+//       }
+     
+//       archived.forEach((items, index)=> {
+//         const {task, datetime} = items;
+       
+//         let html = `
+//         <div class ="todoSub">
+//         <p class = "indicate">completed</p>
+//         <div class="task">${task}</div>
+//         <div class = "js">
+//         <div class="datetime">Date: ${datetime}</div>
+       
+//         </div>
+//         </div>
+        
+        
+//         `
+//         showArch += html;
+//       });
+    
+//       if(archived.length === 0){
+//         archived = [];
+//        showArch = ' <p class ="notask" >NO FINISHED TASK YET.</p> <img class ="taskimg" src="images/noarch.png" alt="" srcset=""> ';
+//         todosContainer.innerHTML += showArch;
+//       }
+//      todosContainer.innerHTML = showArch;
+  
+// });
+
+// function reload(){
+//    location.reload();
+// }
 
