@@ -362,7 +362,7 @@ background-image: linear-gradient(315deg, #eb4511 0%, #b02e0c 74%);
 
        .notask{
         font-size: 15px;
-        color: gray;
+        color: red;
        }
 
        .taskimg{
@@ -407,7 +407,7 @@ background-image: linear-gradient(315deg, #eb4511 0%, #b02e0c 74%);
 
    .notask{
     font-size: 10px;
-    color: black;
+    color: red;
    }
 
    .taskimg{
