@@ -275,7 +275,7 @@ archBtn.addEventListener('click', () =>{
         let html = `
         <div class ="todoSub">
         <p class = "indicate">completed</p>
-        <div class="task">${task}${index}</div>
+        <div class="task">${task}</div>
         <div class = "js">
         <div class="datetime">Date: ${datetime}</div>
        
